@@ -1,5 +1,7 @@
 package me.Ladzboy65;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Logger;
 
 import org.bukkit.command.Command;
@@ -37,9 +39,7 @@ public boolean onCommand(CommandSender sender, Command cmd, String commandLabel,
  
 			InArena ia = new InArena();
 			ia.JoinArena(player);
-	} if (args[0].equalsIgnoreCase("Vive") );{
-		}if(args[0].equalsIgnoreCase("Vive") );{
-}
+	}
 
 	}
 	return false;
@@ -54,9 +54,12 @@ public boolean onCommand(CommandSender sender, Command cmd, String commandLabel,
 		}
 
 		public void saveInventory(Player player) {
+			Map<Player, Inventory> playerInv = new HashMap<Player, Inventory>();
 			Inventory inv = player.getInventory();
+			playerInv.put(player, inv);
 			player.getInventory().clear();
 			player.updateInventory();
+			
 		}
 		public void giveClassInventory(Player player){
 			
