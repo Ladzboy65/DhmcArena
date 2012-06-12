@@ -1,0 +1,35 @@
+name: DarkHelmetMA
+version: 1.0
+description: A Plugin Created by Ladzboy65, to replace the plugin MobArena that was abandoned fun for the whole server!
+authors: Ladzboy65, Jasonbbb711, Viveleroi
+website: Dhmc.us
+main: Darkhelmet.Ladzboy65.ma.MobArena
+commands:
+  ma:
+	join:
+	  description: joins the Mob Arena
+	  usage: /ma join
+	  permission: Mobarena.join
+	leave:
+	  description: leaves the Mob Arena
+	  usage: /ma leave
+	  permission: Mobarena.leave
+	spectate:
+	  description: lets you spectate the Mob Arena
+	  usage: /ma spectate
+	  permission: Mobarena.join
+
+
+permissions:
+  Mobarena.*:
+	default: true
+	children:
+	  Mobarena.join: true
+	  Mobarena.leave: true
+	  Mobarena.spectate: true
+  Mobarena.join:
+	default: true
+  Mobarena.spectate:
+	default: true
+  Mobarena.leave
+	default: true
